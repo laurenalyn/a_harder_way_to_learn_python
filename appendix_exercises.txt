@@ -85,3 +85,16 @@ appendix_exercises.txt
 [~/Documents/ahwtl_python]$ pwd
 /Users/lauren/Documents/ahwtl_python
 [~/Documents/ahwtl_python]$
+-----------------------------------------------------------------
+EX3:
+How to get home if you get lost
+type pwd to find where you are 
+type cd ~ to get back "home"
+
+[~/Documents/ahwtl_python]$ pwd
+/Users/lauren/Documents/ahwtl_python      **this shows me i'm in the directory ahwtl_python
+[~/Documents/ahwtl_python]$ cd ~      **this takes me "home"
+[~]$ ls         **this is listing whats inside my "home directory"
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+[~]$
