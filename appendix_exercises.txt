@@ -1,0 +1,24 @@
+Commands to learn:
+- pwd : print working directory
+- hostname : computer's network name
+- mkdir : make directory(folder)
+- cd : change directory
+- ls : list directory
+- rmdir : remove directory
+- pushd : push directory
+- popd : pop directory
+- cp : copy a file or directory
+- mv : move a file or directory
+- less : page through a file
+- cat : print while file
+- xargs : execute arguments
+- find : fine files
+- grep : find things inside files
+- man : read a manual page
+- apropos : find what manual page is appropriate
+- env : look at environment
+- echo : print some arguments
+- export : export/set a new envirenment variable
+- exit : exit the shell
+- sude : DANGER!! become a super user DANGER!!
+
