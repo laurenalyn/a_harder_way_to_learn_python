@@ -1,3 +1,4 @@
+EX:1
 Commands to learn:
 - pwd : print working directory
 - hostname : computer's network name
@@ -21,4 +22,66 @@ Commands to learn:
 - export : export/set a new envirenment variable
 - exit : exit the shell
 - sude : DANGER!! become a super user DANGER!!
+---------------------------------------------------------------------
+EX2:
+Print working directory (pwd) 20 times
 
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ pwd
+/Users/lauren
+[~]$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+[~]$ Documents/
+-bash: Documents/: is a directory
+[~]$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+[~]$ cd Documents/
+[~/Documents]$ ls
+ahwtl_python		brain_teasers		photography_site
+[~/Documents]$ ahwtl_python/
+-bash: ahwtl_python/: is a directory
+[~/Documents]$ cd ahwtl_python/
+[~/Documents/ahwtl_python]$ ls
+appendix_exercises.txt
+[~/Documents/ahwtl_python]$ pwd
+/Users/lauren/Documents/ahwtl_python
+[~/Documents/ahwtl_python]$
