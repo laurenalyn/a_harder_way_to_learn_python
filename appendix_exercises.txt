@@ -214,3 +214,64 @@ oranges		tangerines
 [~]$ pwd
 /Users/lauren
 [~]$ 
+--------------------------------------------------------------------
+EX5:
+
+cd to the apple directory with one command.
+-- 
+[~/temp/stuff/things/oranges/apple/pear/grape]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple/pear/grape
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd ../../
+[~/temp/stuff/things/oranges/apple]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple
+[~/temp/stuff/things/oranges/apple]$
+
+cd back to temp with one command, but not further above that.
+--
+[~/temp/stuff/things/oranges/apple]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple
+[~/temp/stuff/things/oranges/apple]$ cd ../../../../
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$
+
+Find out how to cd to your "home directory" with one command.
+--
+[~]$ cd ~
+[~]$ pwd
+/Users/lauren
+[~]$ 
+
+cd to your Documents directory, 
+then find it with your GUI file browser (Finder, Windows Explorer, etc.).
+--
+[~]$ cd Documents/
+[~/Documents]$ pwd
+/Users/lauren/Documents
+[~/Documents]$ 
+
+cd to your Downloads directory, then find it with your file browser.
+--
+[~/Documents]$ cd ..
+[~]$ cd Downloads/
+[~/Downloads]$ pwd
+/Users/lauren/Downloads
+[~/Downloads]$ 
+
+Find another directory with your file browser, then cd to it.
+
+--[~/Downloads]$ cd ..
+[~]$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	temp
+[~]$ cd Applications/
+[~/Applications]$ ls
+[~/Applications]$ pwd
+/Users/lauren/Applications
+[~/Applications]$ 
+
+Remember when you put quotes around a directory with spaces in it? 
+You can do that with any command. 
+For example, if you have a directory I Have Fun, 
+then you can do: cd "I Have Fun"
+--------------------------------------------------------------------
