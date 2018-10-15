@@ -275,3 +275,45 @@ You can do that with any command.
 For example, if you have a directory I Have Fun, 
 then you can do: cd "I Have Fun"
 --------------------------------------------------------------------
+EX6:
+The ls Command
+
+[~]$ pwd
+/Users/lauren
+[~]$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	temp
+[~]$ cd temp
+[~/temp]$ ls
+stuff
+[~/temp]$ cd stuff
+[~/temp/stuff]$ ls
+things
+[~/temp/stuff]$ cd things
+[~/temp/stuff/things]$ ls
+oranges		tangerines
+[~/temp/stuff/things]$ cd oranges
+[~/temp/stuff/things/oranges]$ ls
+apple
+[~/temp/stuff/things/oranges]$ apple
+-bash: apple: command not found
+[~/temp/stuff/things/oranges]$ cd apple
+[~/temp/stuff/things/oranges/apple]$ ls
+granny smith	pear
+[~/temp/stuff/things/oranges/apple]$ cd pear
+[~/temp/stuff/things/oranges/apple/pear]$ ls
+bosch	grape
+[~/temp/stuff/things/oranges/apple/pear]$ cd grape
+[~/temp/stuff/things/oranges/apple/pear/grape]$ ls
+seedless
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd ..
+[~/temp/stuff/things/oranges/apple/pear]$ ls
+bosch	grape
+[~/temp/stuff/things/oranges/apple/pear]$ cd ../../../
+[~/temp/stuff/things]$ ls
+oranges		tangerines
+[~/temp/stuff/things]$ cd ../../
+[~/temp]$ ls
+stuff
+[~/temp]$
+--------------------------------------------------------------------
