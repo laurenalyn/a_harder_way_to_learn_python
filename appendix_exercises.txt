@@ -98,3 +98,119 @@ type cd ~ to get back "home"
 Applications	Documents	Library		Music		Public
 Desktop		Downloads	Movies		Pictures
 [~]$
+--------------------------------------------------------------------
+EX4: 
+making directories
+
+[~]$ mkdir temp
+[~]$ mkdir temp/stuff
+[~]$ mdfir temp/stuff/things
+-bash: mdfir: command not found
+[~]$ nkdir temp/stuff/things
+-bash: nkdir: command not found
+[~]$ mkdir temp/stuff/things
+[~]$ -p temp/stuff/things/oranges/apple/pear/grape
+-bash: -p: command not found
+[~]$ mkdir -p temp/stuff/things/oranges/apple/pear/grape
+[~]$ 
+--MAKE SOME MORE DIRECTORIES IN DIRECTORIES
+[~/temp/stuff/things]$ ls
+oranges
+[~/temp/stuff/things]$ mkdir tangerines
+[~/temp/stuff/things]$ ls
+oranges		tangerines
+[~/temp/stuff/things]$ cd oranges
+[~/temp/stuff/things/oranges]$ ls
+apple
+[~/temp/stuff/things/oranges]$ mkdir granny smith
+[~/temp/stuff/things/oranges]$ ls
+apple	granny	smith
+[~/temp/stuff/things/oranges]$ rmdir granny sith
+rmdir: sith: No such file or directory
+[~/temp/stuff/things/oranges]$ rmdir smith
+[~/temp/stuff/things/oranges]$ ls
+apple
+[~/temp/stuff/things/oranges]$ cd apple
+[~/temp/stuff/things/oranges/apple]$ ls
+pear
+[~/temp/stuff/things/oranges/apple]$ mkdir "granny smith"
+[~/temp/stuff/things/oranges/apple]$ ls
+granny smith	pear
+[~/temp/stuff/things/oranges/apple]$ cd granny\ smith/
+[~/temp/stuff/things/oranges/apple/granny smith]$ pws
+-bash: pws: command not found
+[~/temp/stuff/things/oranges/apple/granny smith]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple/granny smith
+[~/temp/stuff/things/oranges/apple/granny smith]$ cd pear
+-bash: cd: pear: No such file or directory
+[~/temp/stuff/things/oranges/apple/granny smith]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ ls
+granny smith	pear
+[~/temp/stuff/things/oranges/apple]$ cd pear
+[~/temp/stuff/things/oranges/apple/pear]$ ls
+grape
+[~/temp/stuff/things/oranges/apple/pear]$ mkdir bosch
+[~/temp/stuff/things/oranges/apple/pear]$ ls
+bosch	grape
+[~/temp/stuff/things/oranges/apple/pear]$ cd grape
+[~/temp/stuff/things/oranges/apple/pear/grape]$ ls
+[~/temp/stuff/things/oranges/apple/pear/grape]$ mkdir seedless
+[~/temp/stuff/things/oranges/apple/pear/grape]$ ls
+seedless
+[~/temp/stuff/things/oranges/apple/pear/grape]$
+--------------------------------------------------------------------
+EX4:
+In this exercise you learn how to 
+change from one directory to another using the cd command.
+
+[~]$ cd temp
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$ cd stuff
+[~/temp/stuff]$ pwd
+/Users/lauren/temp/stuff
+[~/temp/stuff]$ cd things
+[~/temp/stuff/things]$ pwd
+/Users/lauren/temp/stuff/things
+[~/temp/stuff/things]$ cd orange
+-bash: cd: orange: No such file or directory
+[~/temp/stuff/things]$ pwd
+/Users/lauren/temp/stuff/things
+[~/temp/stuff/things]$ cd orange/
+-bash: cd: orange/: No such file or directory
+[~/temp/stuff/things]$ ls
+oranges		tangerines
+[~/temp/stuff/things]$ cd oranges
+[~/temp/stuff/things/oranges]$ pwd
+/Users/lauren/temp/stuff/things/oranges
+[~/temp/stuff/things/oranges]$ cd apple
+[~/temp/stuff/things/oranges/apple]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple
+[~/temp/stuff/things/oranges/apple]$ cd grape
+-bash: cd: grape: No such file or directory
+[~/temp/stuff/things/oranges/apple]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple
+[~/temp/stuff/things/oranges/apple]$ cd pear/
+[~/temp/stuff/things/oranges/apple/pear]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple/pear
+[~/temp/stuff/things/oranges/apple/pear]$ cd grape/
+[~/temp/stuff/things/oranges/apple/pear/grape]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple/pear/grape
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd ..
+[~/temp/stuff/things/oranges/apple/pear]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple
+[~/temp/stuff/things/oranges/apple]$ cd ..
+[~/temp/stuff/things/oranges]$ cd ..
+[~/temp/stuff/things]$ pwd
+/Users/lauren/temp/stuff/things
+[~/temp/stuff/things]$ cd ../../..
+[~]$ pwd
+/Users/lauren
+[~]$ cd temp/stuff/things/oranges/apple/pear/grape
+[~/temp/stuff/things/oranges/apple/pear/grape]$ pwd
+/Users/lauren/temp/stuff/things/oranges/apple/pear/grape
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd ../../../../../../../
+[~]$ pwd
+/Users/lauren
+[~]$ 
