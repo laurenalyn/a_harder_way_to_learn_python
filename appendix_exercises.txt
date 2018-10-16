@@ -646,5 +646,16 @@ mv: awesome.txt: No such file or directory
 iamcool.txt		newplace		thefourthfile.txt
 neat.txt		something		uncool.txt
 [~/temp]$
+--------------------------------------------------------------------
+EX12: 
+View a fill useing less
+
+[~/temp]$ less test.txt
+--
+This is no longer an empty file
+I was instructed to make it for exercises
+in the appendix a - terminal crash course
+in the book a harder way to learn pythong
+test.txt (END)
 
 
