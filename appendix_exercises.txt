@@ -619,4 +619,32 @@ awesome.txt
 [~/temp]$ ls newplace/
 awesome.txt
 [~/temp]$ 
+--------------------------------------------------------------------
+EX 11:
+Moving a new file with the (mv) command
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$ mv awesome.txt uncool.txt
+[~/temp]$ ls
+iamcool.txt		newplace		thefourthfile.txt
+neat.txt		something		uncool.txt
+[~/temp]$ mv newplace oldplace
+[~/temp]$ ls
+iamcool.txt		oldplace		thefourthfile.txt
+neat.txt		something		uncool.txt
+[~/temp]$ mv oldplace newplace
+[~/temp]$ ls
+iamcool.txt		newplace		thefourthfile.txt
+neat.txt		something		uncool.txt
+[~/temp]$ newplace ls
+-bash: newplace: command not found
+[~/temp]$ ls newplace
+awesome.txt
+[~/temp]$ mv awesome.txt uncool.txt
+mv: awesome.txt: No such file or directory
+[~/temp]$ ls
+iamcool.txt		newplace		thefourthfile.txt
+neat.txt		something		uncool.txt
+[~/temp]$
+
 
