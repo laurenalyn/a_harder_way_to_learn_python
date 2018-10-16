@@ -684,5 +684,20 @@ I was instructed to make it for exercises
 in the appendix a - terminal crash course
 in the book a harder way to learn python
 [~/temp]$ 
-
+--------------------------------------------------------------------
+EX14:
+Removing files and directories using rm
+[~]$ cd temp
+[~/temp]$ ls
+something		test2.txt		uncool.txt
+test.txt		thefourthfile.txt
+[~/temp]$ rm uncool.txt thefourthfile.txt  something/
+rm: something/: is a directory
+[~/temp]$ rmdir something/
+[~/temp]$ ls
+test.txt	test2.txt
+[~/temp]$ rm test.txt 
+[~/temp]$ rm test2.txt 
+[~/temp]$ ls
+[~/temp]$
 
