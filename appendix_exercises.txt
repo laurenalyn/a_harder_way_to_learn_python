@@ -13,7 +13,7 @@ Commands to learn:
 - less : page through a file
 - cat : print while file
 - xargs : execute arguments
-- find : fine files
+- find : Find files
 - grep : find things inside files
 - man : read a manual page
 - apropos : find what manual page is appropriate
@@ -655,7 +655,34 @@ View a fill useing less
 This is no longer an empty file
 I was instructed to make it for exercises
 in the appendix a - terminal crash course
-in the book a harder way to learn pythong
+in the book a harder way to learn python
 test.txt (END)
+--------------------------------------------------------------------
+EX13:
+Stream a file (cat)
+[~/temp]$ cat test2.txt
+i am confused
+
+
+what is going on?
+
+[~/temp]$ cat test.txt 
+This is no longer an empty file
+I was instructed to make it for exercises
+in the appendix a - terminal crash course
+in the book a harder way to learn python
+
+Unix: Try cat test.txt test2.txt and see what it does
+[~/temp]$ cat test2.txt test.txt
+i am confused
+
+
+what is going on?
+
+This is no longer an empty file
+I was instructed to make it for exercises
+in the appendix a - terminal crash course
+in the book a harder way to learn python
+[~/temp]$ 
 
 
