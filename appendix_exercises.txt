@@ -562,3 +562,30 @@ Use pushd and popd to move around in directories
 ~/temp/i/like/icecream ~/temp
 [~/temp/i/like/icecream]$ pwd
 /Users/lauren/temp/i/like/icecream
+--------------------------------------------------------------------
+Ex9: 
+Making empty files (touch new_item)
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$ touch iamcool.txt
+[~/temp]$ ls
+iamcool.txt
+[~/temp]$
+
+Unix: Make a directory, change to it, and then make a file in it. 
+Then change one level up and run the rmdir command in this directory. 
+You should get an error. 
+Try to understand why you got this error.
+
+[~]$ cd temp
+[~/temp]$ touch youaretoo.txt
+[~/temp]$ ls
+iamcool.txt	youaretoo.txt
+[~/temp]$ cd .
+[~/temp]$ cd ..
+[~]$ rmdir temp
+rmdir: temp: Directory not empty
+[~]$ 
+--- you cannot empty a directory while files are in it- you have to 
+remove the files first
+
