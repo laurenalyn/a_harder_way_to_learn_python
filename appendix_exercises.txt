@@ -317,3 +317,212 @@ oranges		tangerines
 stuff
 [~/temp]$
 --------------------------------------------------------------------
+EX7:
+Remove Directory (rmdir)
+[~]$ cd temp
+[~/temp]$ ls
+stuff
+[~/temp]$ cd stuff/things/oranges/apple/pear/grape/
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd..
+-bash: cd..: command not found
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd ..
+[~/temp/stuff/things/oranges/apple/pear]$ rmdir grape
+rmdir: grape: Directory not empty
+[~/temp/stuff/things/oranges/apple/pear]$ cd grape/
+[~/temp/stuff/things/oranges/apple/pear/grape]$ ls
+seedless
+[~/temp/stuff/things/oranges/apple/pear/grape]$ rmdir seedless/
+[~/temp/stuff/things/oranges/apple/pear/grape]$ cd ..
+[~/temp/stuff/things/oranges/apple/pear]$ rmdir grape
+[~/temp/stuff/things/oranges/apple/pear]$ cd..
+-bash: cd..: command not found
+[~/temp/stuff/things/oranges/apple/pear]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ rmdir pear
+rmdir: pear: Directory not empty
+[~/temp/stuff/things/oranges/apple]$ cd pear/
+[~/temp/stuff/things/oranges/apple/pear]$ ls
+bosch
+[~/temp/stuff/things/oranges/apple/pear]$ rmdir bosch
+[~/temp/stuff/things/oranges/apple/pear]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ rmdir pear
+rmdir: pear: Directory not empty
+[~/temp/stuff/things/oranges/apple]$ cd pear
+[~/temp/stuff/things/oranges/apple/pear]$ ls
+[~/temp/stuff/things/oranges/apple/pear]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ rmdir pear
+rmdir: pear: Directory not empty
+[~/temp/stuff/things/oranges/apple]$ cd pear/
+[~/temp/stuff/things/oranges/apple/pear]$ ls -alt
+total 16
+drwxr-xr-x  3 lauren  staff    96 Oct 15 19:49 .
+-rw-r--r--@ 1 lauren  staff  6148 Oct 15 18:47 .DS_Store
+drwxr-xr-x  5 lauren  staff   160 Oct 15 18:46 ..
+[~/temp/stuff/things/oranges/apple/pear]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ rm -rf pear
+[~/temp/stuff/things/oranges/apple]$ ls
+granny smith
+[~/temp/stuff/things/oranges/apple]$ cd granny\ smith/
+[~/temp/stuff/things/oranges/apple/granny smith]$ ls
+[~/temp/stuff/things/oranges/apple/granny smith]$ cd ..
+[~/temp/stuff/things/oranges/apple]$ rmdir granny\ smith/
+[~/temp/stuff/things/oranges/apple]$ cd ..
+[~/temp/stuff/things/oranges]$ ls
+apple
+[~/temp/stuff/things/oranges]$ rmdir apple
+rmdir: apple: Directory not empty
+[~/temp/stuff/things/oranges]$ cd apple
+[~/temp/stuff/things/oranges/apple]$ ls
+[~/temp/stuff/things/oranges/apple]$ ls alt
+ls: alt: No such file or directory
+[~/temp/stuff/things/oranges/apple]$ ls -alt
+total 16
+drwxr-xr-x  3 lauren  staff    96 Oct 15 19:51 .
+-rw-r--r--@ 1 lauren  staff  6148 Oct 15 18:47 .DS_Store
+drwxr-xr-x  4 lauren  staff   128 Oct 15 18:46 ..
+[~/temp/stuff/things/oranges/apple]$ cd ..
+[~/temp/stuff/things/oranges]$ rm -rf apple
+[~/temp/stuff/things/oranges]$ ls
+[~/temp/stuff/things/oranges]$ cd ..
+[~/temp/stuff/things]$ ls
+oranges		tangerines
+[~/temp/stuff/things]$ rmdir tangerines/
+[~/temp/stuff/things]$ rmdir oranges/
+rmdir: oranges/: Directory not empty
+[~/temp/stuff/things]$ cd oranges/
+[~/temp/stuff/things/oranges]$ ls
+[~/temp/stuff/things/oranges]$ ls -alt
+total 16
+drwxr-xr-x  4 lauren  staff   128 Oct 15 19:52 ..
+drwxr-xr-x  3 lauren  staff    96 Oct 15 19:52 .
+-rw-r--r--@ 1 lauren  staff  6148 Oct 15 18:46 .DS_Store
+[~/temp/stuff/things/oranges]$ cd ..
+[~/temp/stuff/things]$ ls
+oranges
+[~/temp/stuff/things]$ rm -rf oranges/
+[~/temp/stuff/things]$ ls
+[~/temp/stuff/things]$ cd ..
+[~/temp/stuff]$ ls
+things
+[~/temp/stuff]$ rmdir things
+rmdir: things: Directory not empty
+[~/temp/stuff]$ rm -rf things
+[~/temp/stuff]$ cd ..
+[~/temp]$ ls
+stuff
+[~/temp]$ rmdir stuff
+rmdir: stuff: Directory not empty
+[~/temp]$ cd st
+-bash: cd: st: No such file or directory
+[~/temp]$ cd stuff/
+[~/temp/stuff]$ ls
+[~/temp/stuff]$ ls -alt
+total 16
+drwxr-xr-x  3 lauren  staff    96 Oct 15 19:53 .
+drwxr-xr-x  4 lauren  staff   128 Oct 15 18:46 ..
+-rw-r--r--@ 1 lauren  staff  6148 Oct 15 18:46 .DS_Store
+[~/temp/stuff]$ cd ..
+[~/temp]$ rm -rf stuff/
+[~/temp]$ ls
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$ 
+
+Make 20 more directories and remove them all.
+[~/temp]$ mkdir one
+[~/temp]$ mkdir two
+[~/temp]$ mkdir three
+[~/temp]$ mkdir four
+[~/temp]$ mkdir five
+[~/temp]$ mkdir six
+[~/temp]$ mkdir seven
+[~/temp]$ mkdir eight
+[~/temp]$ mkdir nine
+[~/temp]$ mkdir ten
+[~/temp]$ mkdir 11
+[~/temp]$ mkdir 12
+[~/temp]$ mkdir 13
+[~/temp]$ mkdir 14
+[~/temp]$ mkdir 15
+[~/temp]$ mkdir 16
+[~/temp]$ mkdir 17
+[~/temp]$ mkdir 18
+[~/temp]$ mkdir 19
+[~/temp]$ mkdir 20
+[~/temp]$ ls
+11	13	15	17	19	eight	four	one	six	three
+12	14	16	18	20	five	nine	seven	ten	two
+[~/temp]$ 
+[~/temp]$ rmdir 11
+[~/temp]$ ls
+12	14	16	18	20	five	nine	seven	ten	two
+13	15	17	19	eight	four	one	six	three
+[~/temp]$ rmdir 12
+[~/temp]$ rm dir 13
+rm: dir: No such file or directory
+rm: 13: is a directory
+[~/temp]$ rmdir 13
+[~/temp]$ rmdir 14
+[~/temp]$ rmdir 15
+[~/temp]$ rmdir 16
+[~/temp]$ rmdir 17
+[~/temp]$ rmdir 18
+[~/temp]$ rmdir 19
+[~/temp]$ rmdir 20
+[~/temp]$ rmdir one
+[~/temp]$ rmdir two
+[~/temp]$ rmdir three
+[~/temp]$ rmdir four
+[~/temp]$ rmdir five
+[~/temp]$ rmdir six
+[~/temp]$ rmdir seven
+[~/temp]$ rmdir eight
+[~/temp]$ rmdir nine
+[~/temp]$ rmdir ten
+[~/temp]$ ls
+[~/temp]$ 
+
+Make a single path of directories that is 10 deep and remove them one at a time just like I did above.
+[~/temp]$ mkdir one
+[~/temp]$ cd one
+[~/temp/one]$ mkdir two
+[~/temp/one]$ cd two
+[~/temp/one/two]$ mkdir three
+[~/temp/one/two]$ cd three
+[~/temp/one/two/three]$ mkdir four
+[~/temp/one/two/three]$ cd four
+[~/temp/one/two/three/four]$ mkdir five
+[~/temp/one/two/three/four]$ cd five
+[~/temp/one/two/three/four/five]$ mkdir six
+[~/temp/one/two/three/four/five]$ cd six
+[~/temp/one/two/three/four/five/six]$ mkdir seven
+[~/temp/one/two/three/four/five/six]$ cd seven
+[~/temp/one/two/three/four/five/six/seven]$ mkdir eight
+[~/temp/one/two/three/four/five/six/seven]$ cd eight/
+[~/temp/one/two/three/four/five/six/seven/eight]$ mkdir nine
+[~/temp/one/two/three/four/five/six/seven/eight]$ cd nine/
+[~/temp/one/two/three/four/five/six/seven/eight/nine]$ mkdir ten
+[~/temp/one/two/three/four/five/six/seven/eight/nine]$ cd ten
+[~/temp/one/two/three/four/five/six/seven/eight/nine/ten]$ cd ..
+[~/temp/one/two/three/four/five/six/seven/eight/nine]$ rmdir ten
+[~/temp/one/two/three/four/five/six/seven/eight/nine]$ cd ..
+[~/temp/one/two/three/four/five/six/seven/eight]$ rmdir nine
+[~/temp/one/two/three/four/five/six/seven/eight]$ cd ..
+[~/temp/one/two/three/four/five/six/seven]$ rmdir eight
+[~/temp/one/two/three/four/five/six/seven]$ cd ..
+[~/temp/one/two/three/four/five/six]$ rmdir seven/
+[~/temp/one/two/three/four/five/six]$ cd ..
+[~/temp/one/two/three/four/five]$ rm six/
+rm: six/: is a directory
+[~/temp/one/two/three/four/five]$ rmdir six/
+[~/temp/one/two/three/four/five]$ cd ..
+[~/temp/one/two/three/four]$ rmdir five/
+[~/temp/one/two/three/four]$ cd ..
+[~/temp/one/two/three]$ rmdir four/
+[~/temp/one/two/three]$ cd ..
+[~/temp/one/two]$ rmdir three/
+[~/temp/one/two]$ cd ..
+[~/temp/one]$ rmdir two/
+[~/temp/one]$ cd ..
+[~/temp]$ rmdir one
+[~/temp]$ 
+
