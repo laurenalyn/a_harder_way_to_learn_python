@@ -588,4 +588,35 @@ rmdir: temp: Directory not empty
 [~]$ 
 --- you cannot empty a directory while files are in it- you have to 
 remove the files first
+--------------------------------------------------------------------
+EX10:
+Copy a file (cp)
+[~]$ cd temp
+[~/temp]$ cp iamcool.txt neat.txt
+[~/temp]$ ls
+iamcool.txt	neat.txt	youaretoo.txt
+[~/temp]$ cp neat.txt awesome.txt
+[~/temp]$ ls
+awesome.txt	iamcool.txt	neat.txt	youaretoo.txt
+[~/temp]$ awesome.txt thefourthfile.txt
+-bash: awesome.txt: command not found
+[~/temp]$ cp awesome.txt  thefourthfile.txt
+[~/temp]$ ls
+awesome.txt		neat.txt		youaretoo.txt
+iamcool.txt		thefourthfile.txt
+[~/temp]$ mkdir something
+[~/temp]$ cp awesome.txt something/
+[~/temp]$ ls
+awesome.txt		neat.txt		thefourthfile.txt
+iamcool.txt		something		youaretoo.txt
+[~/temp]$ rm youaretoo.txt
+[~/temp]$ ls
+awesome.txt		neat.txt		thefourthfile.txt
+iamcool.txt		something
+[~/temp]$ ls something/
+awesome.txt
+[~/temp]$ cp -r something newplace
+[~/temp]$ ls newplace/
+awesome.txt
+[~/temp]$ 
 
