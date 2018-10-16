@@ -525,4 +525,40 @@ rm: six/: is a directory
 [~/temp/one]$ cd ..
 [~/temp]$ rmdir one
 [~/temp]$ 
-
+--------------------------------------------------------------------
+EX8:
+Use pushd and popd to move around in directories
+[~]$ cd temp
+[~/temp]$ mkdir -p i/like/icecream
+[~/temp]$ pushd i/like/icecream
+~/temp/i/like/icecream ~/temp
+[~/temp/i/like/icecream]$ popd
+~/temp
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$ pushd icecream
+-bash: pushd: icecream: No such file or directory
+[~/temp]$ pushd i/like
+~/temp/i/like ~/temp
+[~/temp/i/like]$ pwd
+/Users/lauren/temp/i/like
+[~/temp/i/like]$ pushd icecream
+~/temp/i/like/icecream ~/temp/i/like ~/temp
+[~/temp/i/like/icecream]$ pwd
+/Users/lauren/temp/i/like/icecream
+[~/temp/i/like/icecream]$ popd
+~/temp/i/like ~/temp
+[~/temp/i/like]$ pwd
+/Users/lauren/temp/i/like
+[~/temp/i/like]$ popd
+~/temp
+[~/temp]$ pushd i/like/icecream
+~/temp/i/like/icecream ~/temp
+[~/temp/i/like/icecream]$ pushd
+~/temp ~/temp/i/like/icecream
+[~/temp]$ pwd
+/Users/lauren/temp
+[~/temp]$ pushd
+~/temp/i/like/icecream ~/temp
+[~/temp/i/like/icecream]$ pwd
+/Users/lauren/temp/i/like/icecream
